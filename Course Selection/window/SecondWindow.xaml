@@ -1,0 +1,60 @@
+﻿<Window x:Class="Course_Selection.window.SecondWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="个人信息" Height="400" Width="360"
+        ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" MouseEnter="textBlock_Btn_MouseEnter" MouseLeave="textBlock_Btn_MouseLeave">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="8*"/>
+            </Grid.RowDefinitions>
+            <TextBlock x:Name="textBlockQuit" Text="退出" HorizontalAlignment="Right" Margin="0 4 8 0" Cursor="Hand" MouseLeftButtonUp="textBlock_Btn_Up"/>
+            <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="160">
+                <StackPanel Orientation="Horizontal" Margin="8 0 8 0">
+                    <TextBlock Text="学号：" TextAlignment="Right"/>
+                    <TextBlock x:Name="textBlockStudentId" TextAlignment="Center">
+                        <TextBlock.Margin>8 0 0 0</TextBlock.Margin>
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="8 0 8 0">
+                    <TextBlock Text="姓名：" TextAlignment="Right"/>
+                    <TextBlock x:Name="textBlockStudentName" TextAlignment="Center">
+                        <TextBlock.Margin>8 0 0 0</TextBlock.Margin>
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="8 0 8 0">
+                    <TextBlock Text="性别：" TextAlignment="Right"/>
+                    <TextBlock x:Name="textBlockStudentSex" TextAlignment="Center">
+                        <TextBlock.Margin>8 0 0 0</TextBlock.Margin>
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="8 0 8 0">
+                    <TextBlock Text="专业：" TextAlignment="Right"/>
+                    <TextBlock x:Name="textBlockStudentScodeno" TextAlignment="Center">
+                        <TextBlock.Margin>8 0 0 0</TextBlock.Margin>
+                    </TextBlock>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+
+        <Button Grid.Row="1" VerticalAlignment="Top" Click="Button_Click_SeeCourse">
+            <Button.Content>查询已选课程</Button.Content>
+            <Button.Margin>16 0 16 0</Button.Margin>
+            <materialDesign:ButtonAssist.CornerRadius>15</materialDesign:ButtonAssist.CornerRadius>
+        </Button>
+        <Button Grid.Row="1" VerticalAlignment="Center" Click="Button_Click_1">
+            <Button.Content>选择课程</Button.Content>
+            <Button.Margin>16 0 16 0</Button.Margin>
+            <materialDesign:ButtonAssist.CornerRadius>15</materialDesign:ButtonAssist.CornerRadius>
+        </Button>
+    </Grid>
+</Window>
